@@ -1,12 +1,11 @@
 # phys_scrapping
 En éste repositorio podrán encontrar dos versiones de desarrollo de scrapping al sitio web https://phys.org/
 
-Una versión generada con XPath y Requests
+Una desarrollo utilizando el Framework Scrapy para la extracción de la información
 
-Una versión generada con Requests y BeautifulSoup
+Para correr el código y obtener un formato JSON de los datos extraídos es necesario instalar scrapy en un ambiente virtual donde se ubique el script, y con el comando  'scrapy crawl articles' se generará el archivo que contiene la información de phys.org
 
-Ambas versiones al correr el código generarán archivos de texto donde estará compilado el scrapping del sitio phys.org que contendrá titulo, descripción de artículo y cuerpo de artículo.
 
-Con una iteración recursiva se obtendrá dicha información de todos las notas de la página de inicio de https://phys.org/
+Con una iteración recursiva se obtendrá dicha información de las más recientes 8 notas de la página de inicio de https://phys.org/. Cambiando el xpath para abarcar más secciones es posible, para extraer la página en su totalidad.
 
-Altamente recomiendo antes leer https://phys.org/robots.txt para tener claro los permisos de scrapping que otorga el sitio web.
+Altamente recomiendo antes leer https://phys.org/robots.txt para tener claro los permisos de scrapping que otorga el sitio web, aunque una de las grandes ventajas que nos ofrece Scrapy como Framework es que respeta robots.txt en automático, con una serie de configuraciones que podemos encontrar en settings.py
